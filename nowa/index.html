@@ -128,7 +128,7 @@ footer a{color:var(--mech)} footer p+p{margin-top:10px}
 h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;background:var(--bursztyn);margin-top:16px}
 .licznik b{background:var(--bursztyn);color:var(--las);padding:2px 10px;border-radius:999px;font-size:17px}
 .kroki li::before{background:var(--bursztyn);color:var(--las)}
-.k:not(.ciemna){border-top:6px solid var(--bursztyn)}
+.k.ciemna{border-top:6px solid var(--bursztyn)}
 .kim .mocno{padding-left:18px;border-left:4px solid var(--bursztyn)}
 .kto img{border-color:var(--bursztyn)}
 .kanaly a{border:2px solid var(--bursztyn)}
@@ -204,7 +204,7 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
     <h2>Wybierz rozmowę</h2>
     <p class="jak-rez">Wybierasz termin, płacisz 100&nbsp;zł, spotykamy się online i&nbsp;zaczynamy od tego, z&nbsp;czym jesteś dziś.</p>
     <div class="oferty">
-      <div class="k">
+      <div class="k ciemna">
         <h3>Wsparcie w&nbsp;trzeźwieniu 1:1</h3>
         <div class="cena">100 zł</div>
         <p class="forma">Telefon, WhatsApp albo Google Meet</p>
@@ -214,10 +214,10 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
           <li>Do rezerwacji wystarczy imię albo pseudonim i&nbsp;e-mail, a&nbsp;przy rozmowie telefonicznej lub przez WhatsApp także numer.</li>
           <li>Zaczynamy od jednej rozmowy. Potem zdecydujesz, czy chcesz kontynuować.</li>
         </ul>
-        <button type="button" class="btn btn-las" data-cal-link="dawidzadrozny/indywidualna-rozmowa-wspierajaca-1-1" data-cal-config='{"layout":"month_view"}'>Wybierz termin i&nbsp;zapłać</button>
+        <button type="button" class="btn btn-bursztyn" data-cal-link="dawidzadrozny/indywidualna-rozmowa-wspierajaca-1-1" data-cal-config='{"layout":"month_view"}'>Wybierz termin i&nbsp;zapłać</button>
         <p class="zapas">Kalendarz się nie otworzył? <a href="https://cal.com/dawidzadrozny/indywidualna-rozmowa-wspierajaca-1-1" target="_blank" rel="noopener">Otwórz w&nbsp;nowej karcie</a></p>
       </div>
-      <div class="k ciemna">
+      <div class="k">
         <h3>Rozmowa dla bliskich</h3>
         <div class="cena">100 zł</div>
         <p class="forma">Dla partnerów, rodziców i&nbsp;rodzeństwa osób uzależnionych. Telefon, WhatsApp albo Google Meet</p>
@@ -228,7 +228,7 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
           <li>Wnoszę perspektywę osoby, która sama jest w&nbsp;procesie zdrowienia.</li>
           <li>Rozmowa skupia się na Tobie. Nie obejmuje kontaktu z&nbsp;Twoim bliskim ani przekonywania go do leczenia.</li>
         </ul>
-        <button type="button" class="btn btn-bursztyn" data-cal-link="dawidzadrozny/rozmowa-dla-bliskich" data-cal-config='{"layout":"month_view"}'>Wybierz termin dla bliskich</button>
+        <button type="button" class="btn btn-las" data-cal-link="dawidzadrozny/rozmowa-dla-bliskich" data-cal-config='{"layout":"month_view"}'>Wybierz termin dla bliskich</button>
         <p class="zapas">Kalendarz się nie otworzył? <a href="https://cal.com/dawidzadrozny/rozmowa-dla-bliskich" target="_blank" rel="noopener">Otwórz w&nbsp;nowej karcie</a></p>
       </div>
     </div>
