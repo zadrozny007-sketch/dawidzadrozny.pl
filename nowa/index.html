@@ -193,6 +193,36 @@ footer a{color:var(--muted)}
   .kanaly{grid-template-columns:repeat(4,1fr)}
   .kontakt-btns{flex-direction:row}
 }
+
+/* ===== UKŁAD 2026-10 ===== */
+.wrap{max-width:680px}
+.wide{max-width:1060px;margin:0 auto;padding-inline:22px}
+.hero{display:grid;gap:26px;justify-items:center;padding-block:44px 52px}
+.hero .foto{width:min(72vw,280px);height:auto;aspect-ratio:1/1;border-radius:22px;border:0;margin:0;object-position:50% 30%;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.hero-txt{text-align:center}
+.hero .btn-para{margin-top:24px}
+.hero h1{font-size:clamp(31px,7.6vw,52px)}
+.pasek{background:#18233A;border-block:1px solid var(--line)}
+.pasek section{border-top:0}
+.kroki{list-style:none;display:grid;gap:14px;margin:26px 0 24px}
+.kroki li{display:flex;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.kroki .nr{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#1D2A40;font-family:"Libre Franklin",sans-serif;font-weight:700;display:grid;place-items:center}
+.kroki p{font-size:16.5px;margin:0}
+.mocno{font-family:"Libre Franklin",sans-serif;font-weight:600;color:var(--ink);font-size:19px}
+#umow{border-top:1px solid var(--line)}
+@media (min-width:860px){
+  .hero{grid-template-columns:400px 1fr;gap:56px;justify-items:start;align-items:center;padding-block:72px 76px}
+  .hero .foto{width:400px;aspect-ratio:4/5}
+  .hero-txt{text-align:left}
+  .hero .lead{margin:0}
+  .hero .btn-para{margin:28px 0 0;max-width:420px}
+  .hero .znaczniki{justify-content:flex-start}
+  .oferta{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .karta{display:flex;flex-direction:column}
+  .karta .lista{flex:1}
+  #umow > h2,#umow > .eyebrow{text-align:center}
+  #umow > p,#umow .kontakt-box{max-width:680px;margin-left:auto;margin-right:auto}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
@@ -202,18 +232,20 @@ footer a{color:var(--muted)}
 <body>
 
 <!-- WERSJA ROBOCZA: płatne wsparcie 1:1. Link Cal.com do podmiany po utworzeniu wydarzenia. -->
-<div class="wrap">
+<div class="wide">
   <header class="hero">
-    <img src="../zdjecie.jpg" alt="Dawid Zadrożny" class="foto" width="128" height="128">
-    <h1>8&nbsp;lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.</h1>
-    <p class="lead">Wsparcie w&nbsp;trzeźwieniu 1:1. Rozmawiam z&nbsp;tymi, którzy w&nbsp;tym tkwią, i&nbsp;z&nbsp;tymi, którzy na to patrzą.</p>
-    <div class="btn-para">
-      <a class="btn btn-main ui" href="#umow">Umów rozmowę<small>Bez oceniania i&nbsp;bez zobowiązań</small></a>
-    </div>
-    <div class="znaczniki">
-      <span class="znacznik">Trzeźwieję od 27.12.2024</span>
-      <span class="znacznik">Profilaktyka uzależnień</span>
-      <span class="znacznik">Rozmowy online</span>
+    <img src="dawid.jpg" alt="Dawid Zadrożny" class="foto" width="900" height="900">
+    <div class="hero-txt">
+      <h1>8&nbsp;lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.</h1>
+      <p class="lead">Wsparcie w&nbsp;trzeźwieniu 1:1. Rozmawiam z&nbsp;tymi, którzy w&nbsp;tym tkwią, i&nbsp;z&nbsp;tymi, którzy na to patrzą.</p>
+      <div class="btn-para">
+        <a class="btn btn-main ui" href="#umow">Umów rozmowę<small>Bez oceniania i&nbsp;bez zobowiązania do kolejnych spotkań</small></a>
+      </div>
+      <div class="znaczniki">
+        <span class="znacznik">Trzeźwieję od 27.12.2024</span>
+        <span class="znacznik">Profilaktyka uzależnień</span>
+        <span class="znacznik">Rozmowy online</span>
+      </div>
     </div>
   </header>
 </div>
@@ -231,7 +263,35 @@ footer a{color:var(--muted)}
   </section>
 </div>
 
+
+<div class="pasek">
 <div class="wrap">
+  <section>
+    <span class="eyebrow">Kim jestem</span>
+    <h2>Znam ten schemat od środka</h2>
+    <p>Przez osiem lat uciekałem w&nbsp;alkohol i&nbsp;inne substancje. Z&nbsp;boku wyglądało to dobrze. Praca, sport, partnerka, ludzie, którzy niczego nie widzieli. Stwarzałem pozory i&nbsp;długo wydawało mi się, że skoro wszystko na zewnątrz gra, to nie jest tak źle.</p>
+    <p>Przez ostatnie cztery lata szukałem drogi. Obietnice, krótkie okresy abstynencji, powroty do tych samych schematów. Przełom nie przyszedł dlatego, że nagle wszystko zrozumiałem. Zacząłem słuchać ludzi, którzy chcieli dla mnie dobrze, przyjąłem pomoc i&nbsp;przestałem próbować przejść przez to sam.</p>
+    <p>Trzeźwieję od 27 grudnia 2024 roku. Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień i&nbsp;zdobywam kolejne kwalifikacje. <strong>Nie jestem terapeutą i&nbsp;nie udaję, że moje doświadczenie zastępuje leczenie.</strong></p>
+  </section>
+</div>
+
+</div>
+
+<div class="wrap">
+  <section>
+    <span class="eyebrow">Jak to wygląda</span>
+    <h2>Przebieg rozmowy</h2>
+    <p><strong>Uwaga jest na Tobie.</strong> Nie przychodzisz po wykład. Przychodzisz po rozmowę, w&nbsp;której przez większość czasu mówisz Ty.</p>
+    <ol class="kroki">
+      <li><span class="nr">1</span><div><h3>Słucham i&nbsp;pytam</h3><p>Co dzieje się teraz w&nbsp;Twoim życiu, z&nbsp;czym sobie nie radzisz i&nbsp;jakie próby już były. Pomagam to uporządkować, zamiast od razu podsuwać rozwiązania.</p></div></li>
+      <li><span class="nr">2</span><div><h3>Mówię o&nbsp;sobie, jeśli to pasuje</h3><p>Co u&nbsp;mnie zadziałało, jakie błędy powtarzałem latami i&nbsp;co wreszcie pozwoliło mi żyć inaczej.</p></div></li>
+      <li><span class="nr">3</span><div><h3>Jeden konkretny krok</h3><p>Razem pracujemy nad jednym krokiem, który możesz podjąć po rozmowie.</p></div></li>
+    </ol>
+    <p class="mocno">To, gdzie jesteś teraz, nie przesądza o&nbsp;tym, co będzie dalej.</p>
+  </section>
+</div>
+
+<div class="wide">
   <section id="umow">
     <span class="eyebrow">Rezerwacja</span>
     <h2>Wybierz rozmowę</h2>
@@ -279,27 +339,6 @@ footer a{color:var(--muted)}
   </section>
 </div>
 
-<div class="wrap">
-  <section>
-    <span class="eyebrow">Jak to wygląda</span>
-    <h2>Przebieg rozmowy</h2>
-    <p><strong>Uwaga jest na Tobie.</strong> Na tym, co dzieje się teraz w&nbsp;Twoim życiu, z&nbsp;czym sobie nie radzisz i&nbsp;jakie próby już były.</p>
-    <p>Najpierw słucham i&nbsp;pytam. Pomagam uporządkować sytuację, zamiast od razu podsuwać rozwiązania.</p>
-    <p>Potem, jeśli to pasuje do Twojej sytuacji, mówię o&nbsp;tym, co przeszedłem. Co u&nbsp;mnie zadziałało, jakie błędy powtarzałem latami i&nbsp;co wreszcie pozwoliło mi żyć inaczej.</p>
-    <p>Nie przychodzisz po wykład. Przychodzisz po rozmowę, w&nbsp;której przez większość czasu mówisz Ty.</p>
-    <p style="margin-top:20px"><strong>To, gdzie jesteś teraz, nie przesądza o&nbsp;tym, co będzie dalej.</strong></p>
-  </section>
-</div>
-
-<div class="wrap">
-  <section>
-    <span class="eyebrow">Kim jestem</span>
-    <h2>Znam ten schemat od środka</h2>
-    <p>Przez osiem lat uciekałem w&nbsp;alkohol i&nbsp;inne substancje. Z&nbsp;boku wyglądało to dobrze. Praca, sport, partnerka, ludzie, którzy niczego nie widzieli. Stwarzałem pozory i&nbsp;długo wydawało mi się, że skoro wszystko na zewnątrz gra, to nie jest tak źle.</p>
-    <p>Przez ostatnie cztery lata szukałem drogi. Obietnice, krótkie okresy abstynencji, powroty do tych samych schematów. Przełom nie przyszedł dlatego, że nagle wszystko zrozumiałem. Zacząłem słuchać ludzi, którzy chcieli dla mnie dobrze, przyjąłem pomoc i&nbsp;przestałem próbować przejść przez to sam.</p>
-    <p>Trzeźwieję od 27 grudnia 2024 roku. Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień i&nbsp;zdobywam kolejne kwalifikacje. <strong>Nie jestem terapeutą i&nbsp;nie udaję, że moje doświadczenie zastępuje leczenie.</strong></p>
-  </section>
-</div>
 
 <div class="wrap">
   <section>
@@ -317,6 +356,7 @@ footer a{color:var(--muted)}
     <p style="margin-top:20px;font-size:16px;color:var(--muted)">Rozmów nie nagrywam. Nie publikuję ich treści ani nie udostępniam osobom postronnym. W&nbsp;sytuacji bezpośredniego zagrożenia życia lub zdrowia bezpieczeństwo ma pierwszeństwo. Zasady przetwarzania danych opisuję w&nbsp;<a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
   </section>
 </div>
+
 
 <div class="wrap">
   <section>
@@ -356,6 +396,7 @@ footer a{color:var(--muted)}
   </section>
 </div>
 
+
 <div class="wrap">
   <section>
     <span class="eyebrow">Gdzie mnie znajdziesz</span>
@@ -369,6 +410,7 @@ footer a{color:var(--muted)}
   </section>
 </div>
 
+
 <div class="wrap">
   <section>
     <div class="kryzys">
@@ -377,6 +419,8 @@ footer a{color:var(--muted)}
     </div>
   </section>
 </div>
+
+
 
 <footer>
   <div class="wrap">
