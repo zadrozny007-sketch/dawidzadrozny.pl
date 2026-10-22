@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Projekt A – Droga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap">
+<style>
+:root{--mgla:#EDF1EC;--las:#1F3A2E;--mech:#5E7466;--bursztyn:#E2A541;--papier:#FFFFFF;--linia:#C9D3CB}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--mgla);color:var(--las);font:18px/1.7 "Literata",Georgia,serif}
+h1,h2,h3,.btn,.cena{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+.hero{position:relative;padding:56px 0 40px;display:grid;gap:28px}
+.top{display:flex;gap:18px;align-items:center}
+.top img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:3px solid var(--papier)}
+.top p{font-size:15px;color:var(--mech);line-height:1.4}.top b{color:var(--las);font-family:"Bricolage Grotesque";font-size:17px}
+h1{font-size:clamp(40px,8.5vw,92px);line-height:.98;letter-spacing:-.035em;font-weight:700;max-width:13ch}
+.lead{font-size:20px;max-width:34ch;color:#2E4A3D}
+.btn{display:inline-block;background:var(--las);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:16px 26px;border-radius:999px}
+.btn:hover{background:#163026}
+.road{position:absolute;right:0;top:40px;width:46%;height:420px;pointer-events:none}
+@media(max-width:820px){.road{display:none}}
+.road path{fill:none;stroke:var(--bursztyn);stroke-width:4;stroke-linecap:round;stroke-dasharray:2 14}
+.dzis{display:flex;align-items:baseline;gap:10px;font-family:"Bricolage Grotesque";color:var(--mech);font-size:15px}
+.dzis strong{color:var(--las);font-size:22px}
+section{padding:56px 0;border-top:1px solid var(--linia)}
+h2{font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.1;margin-bottom:22px}
+.dla{display:grid;gap:12px;max-width:760px}
+.dla p{padding-left:22px;border-left:3px solid var(--bursztyn)}
+.oferty{display:grid;gap:18px}
+@media(min-width:820px){.oferty{grid-template-columns:1.1fr .9fr}}
+.k{background:var(--papier);border-radius:22px;padding:28px}
+.k.ciemna{background:var(--las);color:#E8EEE9}.k.ciemna h3{color:#fff}
+.cena{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1}.cena small{font-size:16px;font-weight:500;opacity:.7}
+.k h3{font-size:24px;margin:12px 0 10px}
+.k ul{list-style:none;display:grid;gap:8px;margin:14px 0 22px;font-size:17px}
+.k li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--bursztyn);margin-right:10px;transform:translateY(-2px)}
+.k .btn{background:var(--bursztyn);color:var(--las)}
+.k:not(.ciemna) .btn{background:var(--las);color:#fff}
+</style></head><body>
+<div class="w"><header class="hero">
+<svg class="road" viewBox="0 0 400 420" aria-hidden="true"><path d="M20 400 C 140 360, 60 250, 190 210 S 330 120, 380 20"/></svg>
+<div class="top"><img src="../nowa/dawid.jpg" alt="Dawid Zadrożny"><p><b>Dawid Zadrożny</b><br>Wsparcie w trzeźwieniu 1:1</p></div>
+<h1>8 lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.</h1>
+<p class="lead">Rozmawiam z tymi, którzy w tym tkwią, i z tymi, którzy na to patrzą.</p>
+<div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap"><a class="btn" href="#umow">Umów rozmowę</a><span class="dzis">W drodze od <strong id="dni">…</strong> dni</span></div>
+</header></div>
+<div class="w"><section><h2>Czy ta rozmowa jest dla Ciebie?</h2><div class="dla">
+<p><b>Chcesz przestać pić albo brać</b>, ale kolejne próby kończą się tak samo.</p>
+<p><b>Już nie pijesz albo nie bierzesz</b> i chcesz to utrzymać.</p>
+<p><b>Jesteś bliską osobą</b> kogoś uzależnionego i brakuje Ci już sił.</p></div></section>
+<section id="umow"><h2>Wybierz rozmowę</h2><div class="oferty">
+<div class="k"><div class="cena">100 zł <small>z VAT</small></div><h3>Wsparcie w trzeźwieniu 1:1</h3><ul><li>Nie musisz przygotowywać swojej historii</li><li>Słucham bez oceniania</li><li>Razem pracujemy nad jednym krokiem</li></ul><a class="btn" href="#">Wybierz termin</a></div>
+<div class="k ciemna"><div class="cena">100 zł <small>z VAT</small></div><h3>Rozmowa dla bliskich</h3><ul><li>O tym, co Ty przeżywasz</li><li>Na co masz wpływ</li><li>Jeden krok dla siebie</li></ul><a class="btn" href="#">Wybierz termin</a></div>
+</div></section></div>
+<script>document.getElementById('dni').textContent=Math.floor((Date.now()-new Date('2024-12-27'))/864e5)</script>
+</body></html>

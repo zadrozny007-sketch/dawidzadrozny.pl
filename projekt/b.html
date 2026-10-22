@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Projekt B – Licznik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Schibsted+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root{--biel:#FFFFFF;--atrament:#14213D;--szary:#5B6B82;--swit:#F2B33D;--tlo2:#F2F4F8;--linia:#DDE2EA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--biel);color:var(--atrament);font:17.5px/1.65 "Schibsted Grotesk",system-ui,sans-serif}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
+.hero{display:grid;gap:30px;padding:48px 0 56px}
+@media(min-width:860px){.hero{grid-template-columns:1.25fr .75fr;align-items:end;padding:80px 0}}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(44px,8vw,96px);line-height:.95;letter-spacing:-.02em}
+.lead{font-size:20px;color:var(--szary);max-width:30ch;margin:22px 0 28px}
+.btn{display:inline-block;background:var(--atrament);color:#fff;text-decoration:none;font-weight:700;padding:16px 28px;border-radius:12px}
+.licznik{background:var(--atrament);color:#fff;border-radius:24px;padding:28px;display:grid;gap:14px}
+.licznik img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 30%}
+.licznik .num{font-family:"Instrument Serif",serif;font-size:96px;line-height:.9;color:var(--swit)}
+.licznik p{color:#C9D2E3;font-size:15.5px;line-height:1.5}
+.pas{background:var(--tlo2);padding:56px 0}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(34px,5.5vw,52px);line-height:1;margin-bottom:26px}
+.dla{display:grid;gap:14px}@media(min-width:860px){.dla{grid-template-columns:repeat(3,1fr)}}
+.dla p{background:#fff;border-radius:16px;padding:22px;border-top:4px solid var(--swit)}
+.oferty{display:grid;gap:18px;padding:56px 0}@media(min-width:860px){.oferty{grid-template-columns:1fr 1fr}}
+.k{border:1.5px solid var(--linia);border-radius:22px;padding:30px}
+.k:first-child{border-color:var(--atrament)}
+.k h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1.05}
+.k .cena{font-weight:700;font-size:18px;margin:10px 0 14px}
+.k ul{margin:0 0 22px 20px;display:grid;gap:6px}
+</style></head><body>
+<div class="w"><header class="hero">
+<div><h1>8 lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.</h1>
+<p class="lead">Wsparcie w trzeźwieniu 1:1. Rozmawiam z tymi, którzy w tym tkwią, i z tymi, którzy na to patrzą.</p>
+<a class="btn" href="#umow">Umów rozmowę</a></div>
+<aside class="licznik"><img src="../nowa/dawid.jpg" alt="Dawid Zadrożny"><div class="num" id="dni">…</div><p>dni bez alkoholu i innych substancji. Od 27 grudnia 2024. Dawid Zadrożny</p></aside>
+</header></div>
+<div class="pas"><div class="w"><h2>Czy to rozmowa dla Ciebie?</h2><div class="dla">
+<p><b>Chcesz przestać pić albo brać</b>, ale kolejne próby kończą się tak samo.</p>
+<p><b>Już nie pijesz albo nie bierzesz</b> i chcesz to utrzymać.</p>
+<p><b>Jesteś bliską osobą</b> kogoś uzależnionego i brakuje Ci już sił.</p></div></div></div>
+<div class="w"><div class="oferty" id="umow">
+<div class="k"><h3>Wsparcie w trzeźwieniu 1:1</h3><div class="cena">100 zł z VAT</div><ul><li>Nie musisz przygotowywać swojej historii</li><li>Słucham bez oceniania</li><li>Razem pracujemy nad jednym krokiem</li></ul><a class="btn" href="#">Wybierz termin</a></div>
+<div class="k"><h3>Rozmowa dla bliskich</h3><div class="cena">100 zł z VAT</div><ul><li>O tym, co Ty przeżywasz</li><li>Na co masz wpływ</li><li>Jeden krok dla siebie</li></ul><a class="btn" href="#">Wybierz termin</a></div>
+</div></div>
+<script>document.getElementById('dni').textContent=Math.floor((Date.now()-new Date('2024-12-27'))/864e5)</script>
+</body></html>
