@@ -3,456 +3,343 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-
-<!-- ====================================================================
-     TYTUŁ I OPIS (widoczne w Google i przy udostępnianiu linku)
-     ==================================================================== -->
-<title>Dawid Zadrożny | Rozmowy wspierające o wychodzeniu z uzależnienia</title>
-<meta name="description" content="Trzeźwieję od 27 grudnia 2024. Rozmawiam z ludźmi, którzy tkwią w uzależnieniu, i z ich bliskimi. Bezpłatna rozmowa wstępna, 20 minut, online.">
-<meta name="robots" content="index, follow">
+<title>Dawid Zadrożny | Wsparcie w trzeźwieniu 1:1</title>
+<meta name="description" content="Trzeźwieję od 27 grudnia 2024. Rozmowy 1:1 online dla osób uzależnionych i ich bliskich. Wsparcie oparte na własnym doświadczeniu, nie terapia.">
 <link rel="canonical" href="https://dawidzadrozny.pl/">
-<meta property="og:title" content="Dawid Zadrożny | Rozmowy wspierające">
-<meta property="og:description" content="8 lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc. Rozmawiam z tymi, którzy w tym tkwią, i z tymi, którzy na to patrzą.">
+<meta property="og:title" content="Dawid Zadrożny | Wsparcie w trzeźwieniu 1:1">
+<meta property="og:description" content="8 lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://dawidzadrozny.pl/">
-<meta property="og:image" content="https://dawidzadrozny.pl/zdjecie.jpg">
+<meta property="og:image" content="https://dawidzadrozny.pl/dawid.jpg">
 <meta property="og:locale" content="pl_PL">
-
+<meta name="theme-color" content="#EDF1EC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
 <style>
-/* ====================================================================
-   KOLORY. Chcesz inny odcień pomarańczu? Zmień --accent w obu miejscach.
-   ==================================================================== */
 :root{
-  --ground:#1D2A40;
-  --surface:#26344D;
-  --ink:#F1EDE5;
-  --ink-2:#CFD5DE;
-  --muted:#9EA9B7;
-  --line:#38445A;
-  --line-2:#2F3B50;
-  --accent:#D8B673;
-  --accent-dark:#C4A05D;
-  --accent-soft:#212C3D;
-  --warn:#E3A3A3;
-  --warn-soft:#33262A;
+  --mgla:#EDF1EC; --papier:#FFFFFF; --las:#1F3A2E; --las-2:#163026; --mech:#5E7466;
+  --bursztyn:#E2A541; --linia:#CBD5CD; --tekst:#2C4337; --czerwien:#9E3B2E; --czerw-tlo:#F6E7E3;
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{
-  background:var(--ground);
-  color:var(--ink-2);
-  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
-  font-size:17.5px;
-  line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:640px;margin:0 auto;padding-inline:22px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--mgla);color:var(--tekst);font:18px/1.7 "Literata",Georgia,serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.ui,.btn,summary,.cena{font-family:"Bricolage Grotesque",system-ui,sans-serif;color:var(--las)}
+a{color:var(--las)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--bursztyn);outline-offset:3px;border-radius:6px}
+.w{max-width:1040px;margin:0 auto;padding-inline:22px}
+.waska{max-width:720px}
+section{padding-block:64px;border-top:1px solid var(--linia)}
+h2{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.025em;line-height:1.08;margin-bottom:24px}
+h3{font-size:21px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+p+p{margin-top:16px}
+strong{font-weight:600;color:var(--las)}
 
-h1,h2,h3,.ui{font-family:"Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-h1{font-size:clamp(29px,7.5vw,39px);font-weight:700;line-height:1.14;letter-spacing:-.02em;color:var(--ink);text-wrap:pretty}
-h2{font-size:23px;font-weight:700;line-height:1.2;letter-spacing:-.01em;color:var(--ink);margin-bottom:18px;text-wrap:pretty}
-h3{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:5px}
-p{margin-bottom:16px}
-p:last-child{margin-bottom:0}
-strong{color:var(--ink);font-weight:600}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+/* przyciski */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:17px;
+  padding:15px 26px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;line-height:1.2;text-align:center}
+.btn-las{background:var(--las);color:#fff} .btn-las:hover{background:var(--las-2)}
+.btn-bursztyn{background:var(--bursztyn);color:var(--las)} .btn-bursztyn:hover{background:#D69633}
+.btn-obrys{background:transparent;color:var(--las);border-color:var(--las)} .btn-obrys:hover{background:var(--las);color:#fff}
+.wa-ikona{width:20px;height:20px;flex:none}
 
-section{padding-block:48px;border-top:1px solid var(--line)}
-.eyebrow{
-  font-family:"Libre Franklin",sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
-  display:block;margin-bottom:11px;
-}
+/* hero */
+.hero{position:relative;padding-block:48px 64px}
+.kto{display:flex;gap:16px;align-items:center;margin-bottom:34px}
+.kto img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:3px solid var(--papier)}
+.kto p{font-size:15px;line-height:1.4;color:var(--mech)} .kto b{font-family:"Bricolage Grotesque";font-weight:600;font-size:17px;color:var(--las)}
+h1{font-size:clamp(42px,9vw,92px);line-height:.98;letter-spacing:-.04em;font-weight:700;max-width:12.5ch;position:relative}
+.lead{font-size:clamp(19px,2.4vw,22px);max-width:32ch;margin-top:24px;color:var(--tekst)}
+.akcje{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.podlead{font-size:16.5px;color:var(--mech);max-width:40em;margin-top:12px}
+.licznik{margin-top:22px;font-family:"Bricolage Grotesque";color:var(--mech);font-size:15.5px}
+.licznik b{color:var(--las);font-weight:700;font-size:19px}
+.droga{position:absolute;right:-10px;top:10px;width:44%;height:100%;pointer-events:none;display:none}
+.droga path{fill:none;stroke:var(--bursztyn);stroke-width:4;stroke-linecap:round;stroke-dasharray:1 14}
+@media(min-width:860px){.droga{display:block}}
 
-/* ===== HERO ===== */
-.hero{padding-block:52px 46px;text-align:center;border-top:0}
-.foto{
-  width:128px;height:128px;border-radius:50%;object-fit:cover;
-  display:block;margin:0 auto 22px;
-  border:3px solid var(--surface);background:var(--line-2);
-  box-shadow:0 2px 18px rgba(0,0,0,.08);
-}
-.hero h1{margin-bottom:14px}
-.hero .lead{font-size:18.5px;color:var(--ink-2);max-width:28em;margin:0 auto}
-.znaczniki{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:20px 0 24px}
-.znacznik{
-  font-family:"Libre Franklin",sans-serif;font-size:12.5px;font-weight:500;
-  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px;
-}
+/* dla kogo */
+.dla{display:grid;gap:14px}
+.dla p{margin:0;padding:4px 0 4px 20px;border-left:3px solid var(--bursztyn)}
 
-/* ===== PRZYCISKI ===== */
-.btn{
-  display:block;width:100%;text-align:center;
-  font-family:"Libre Franklin",sans-serif;font-size:16.5px;font-weight:600;
-  padding:15px 18px;border-radius:10px;border:1.5px solid transparent;
-  cursor:pointer;line-height:1.35;transition:background .15s,border-color .15s;
-}
-.btn-main{background:var(--accent);color:#1D2A40}
-.btn-main:hover{background:var(--accent-dark);color:#1D2A40;text-decoration:none}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-ghost:hover{border-color:var(--accent);text-decoration:none}
-.btn:disabled{opacity:.5;cursor:default}
-.btn:disabled:hover{border-color:var(--line)}
-.btn small{display:block;font-size:13px;font-weight:500;opacity:.85;margin-top:3px}
-.btn-para{display:flex;flex-direction:column;gap:10px;max-width:390px;margin:0 auto}
+/* kim jestem */
+.kim{background:var(--papier)}
+.kim section{border-top:0}
+.kim .mocno{margin-top:22px;font-family:"Bricolage Grotesque";font-weight:600;font-size:19px;color:var(--las)}
 
-/* ===== LISTY ===== */
-.lista{list-style:none;display:flex;flex-direction:column;gap:13px}
-.lista li{position:relative;padding-left:25px}
-.lista li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:2px;background:var(--accent)}
-.lista--x li::before{
-  content:"";top:9px;left:1px;width:9px;height:9px;background:none;
-  border-left:2px solid var(--warn);border-bottom:2px solid var(--warn);
-  transform:rotate(-45deg) scale(.9);
-}
+/* przebieg */
+.kroki{list-style:none;display:grid;gap:14px;margin-top:8px;counter-reset:k}
+@media(min-width:860px){.kroki{grid-template-columns:repeat(3,1fr)}}
+.kroki li{counter-increment:k;background:var(--papier);border-radius:20px;padding:24px}
+.kroki li::before{content:counter(k);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;
+  background:var(--las);color:#fff;font-family:"Bricolage Grotesque";font-weight:700;margin-bottom:14px}
+.kroki p{font-size:16.5px;margin-top:8px}
+.na-koniec{margin-top:28px;font-family:"Bricolage Grotesque";font-weight:600;font-size:20px;color:var(--las)}
 
-/* ===== KARTY OFERTY ===== */
-.oferta{display:flex;flex-direction:column;gap:15px}
-.karta{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:23px 21px}
-.karta--wyroz{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
-.cena{
-  font-family:"Libre Franklin",sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:.06em;text-transform:uppercase;color:var(--accent);
-  display:block;margin-bottom:7px;
-}
-.karta .meta{font-family:"Libre Franklin",sans-serif;font-size:13.5px;color:var(--muted);margin-bottom:13px}
-.karta ul{margin-bottom:19px}
+/* oferty */
+.oferty{display:grid;gap:18px}
+@media(min-width:860px){.oferty{grid-template-columns:1.08fr .92fr;align-items:stretch}}
+.k{background:var(--papier);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column}
+.k.ciemna{background:var(--las);color:#DDE7E0} .k.ciemna h3,.k.ciemna .cena,.k.ciemna strong{color:#fff}
+.cena{font-size:20px;font-weight:600;letter-spacing:0;line-height:1.3;margin:4px 0 4px}
+.cena small{font-size:15px;font-weight:500;letter-spacing:0;opacity:.65;margin-left:6px}
+.k h3{font-size:26px;margin:0}
+.k .forma{font-size:15px;opacity:.75}
+.k ul{list-style:none;display:grid;gap:10px;margin:20px 0 26px;font-size:17px;flex:1}
+.k li{position:relative;padding-left:20px}
+.k li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:8px;border-radius:50%;background:var(--bursztyn)}
+.k .zapas{margin-top:12px;font-size:14px;opacity:.75;text-align:center}
+.k .zapas a{color:inherit}
+.jak-rez{font-size:18px;max-width:40em;margin:-6px 0 26px}
+.zasady-platnosci{margin-top:22px;font-size:16px;color:var(--mech);max-width:720px}
+.pytanie{margin-top:28px;background:var(--las);color:#DDE7E0;border-radius:24px;padding:28px;display:grid;gap:18px;align-items:center}
+.pytanie h3{color:#fff} .pytanie p{margin-top:6px;font-size:16.5px}
+@media(min-width:860px){.pytanie{grid-template-columns:1fr auto}}
+.pytanie .akcje{margin-top:0}
+.pytanie .btn-obrys{color:#fff;border-color:#fff} .pytanie .btn-obrys:hover{background:#fff;color:var(--las)}
 
-/* ===== FAQ ===== */
-details{border-bottom:1px solid var(--line-2)}
-details:last-of-type{border-bottom:0}
-summary{
-  font-family:"Libre Franklin",sans-serif;font-size:16.5px;font-weight:600;
-  color:var(--ink);cursor:pointer;padding-block:15px;padding-right:28px;
-  position:relative;list-style:none;
-}
+/* zasady */
+.nie{list-style:none;display:grid;gap:12px}
+.nie li{position:relative;padding-left:28px}
+.nie li::before{content:"";position:absolute;left:2px;top:.55em;width:12px;height:12px;border:2px solid var(--mech);border-radius:50%}
+.nie li::after{content:"";position:absolute;left:4px;top:calc(.55em + 6px);width:12px;height:2px;background:var(--mech);transform:rotate(-45deg)}
+.drobne{margin-top:22px;font-size:15.5px;color:var(--mech)}
+
+/* pytania */
+details{border-bottom:1px solid var(--linia)}
+summary{font-weight:600;font-size:18px;color:var(--las);cursor:pointer;padding:18px 36px 18px 0;list-style:none;position:relative}
 summary::-webkit-details-marker{display:none}
-summary::after{
-  content:"";position:absolute;right:6px;top:22px;
-  width:8px;height:8px;border-right:2px solid var(--accent);
-  border-bottom:2px solid var(--accent);transform:rotate(45deg);transition:transform .15s;
-}
-details[open] summary::after{transform:rotate(-135deg);top:25px}
-details .tresc{padding-bottom:16px;font-size:16.5px}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:28px;font-weight:500;color:var(--bursztyn)}
+details[open] summary::after{content:"–"}
+details .tresc{padding-bottom:20px;font-size:17px}
 
-/* ===== RAMKI ===== */
-.kryzys{
-  background:var(--warn-soft);border-left:3px solid var(--warn);
-  border-radius:0 10px 10px 0;padding:17px 19px;margin-top:22px;
-}
-.kryzys strong{color:var(--warn)}
-.kryzys p{font-size:16px}
-.info{background:var(--accent-soft);border-radius:10px;padding:16px 18px;font-size:16px;margin-top:18px}
+/* kanaly + kryzys + stopka */
+.kanaly{display:flex;flex-wrap:wrap;gap:10px}
+.kanaly a{font-family:"Bricolage Grotesque";font-weight:600;text-decoration:none;padding:12px 20px;border-radius:999px;background:var(--papier)}
+.kanaly a:hover{background:var(--las);color:#fff}
+.kryzys{background:var(--czerw-tlo);border-radius:20px;padding:22px 24px;color:#4A2620}
+.kryzys strong{color:var(--czerwien)}
+footer{border-top:1px solid var(--linia);padding-block:34px 48px;text-align:center;font-family:"Bricolage Grotesque";font-size:14.5px;color:var(--mech)}
+footer a{color:var(--mech)} footer p+p{margin-top:10px}
+.linki{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+.zastrzezenie{max-width:46em;margin:16px auto 0;font-size:13px;line-height:1.6}
 
-/* ===== WYRÓŻNIONY KONTAKT ===== */
-.kontakt-box{
-  margin-top:26px;background:var(--surface);border:2px solid var(--accent);
-  border-radius:14px;padding:22px;text-align:center;
-}
-.kontakt-box p{margin-bottom:7px}
-.kontakt-box p:first-of-type{font-size:18.5px;color:var(--ink);font-weight:600}
-.kontakt-box p:nth-of-type(2){font-size:16px;margin-bottom:18px}
-.kontakt-btns{display:flex;flex-direction:column;gap:9px;max-width:340px;margin:0 auto}
-.kontakt-btns .btn{font-size:15.5px}
+/* więcej bursztynu */
+h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;background:var(--bursztyn);margin-top:16px}
+.licznik b{background:var(--bursztyn);color:var(--las);padding:2px 10px;border-radius:999px;font-size:17px}
+.kroki li::before{background:var(--bursztyn);color:var(--las)}
+.k.ciemna{border-top:6px solid var(--bursztyn)}
+.kim .mocno{padding-left:18px;border-left:4px solid var(--bursztyn)}
+.kto img{border-color:var(--bursztyn)}
+.kanaly a{border:2px solid var(--bursztyn)}
+.nie li::before{border-color:var(--bursztyn)} .nie li::after{background:var(--bursztyn)}
 
-/* ===== KANAŁY I KAWA ===== */
-.kanaly{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:22px}
-.kanal{
-  font-family:"Libre Franklin",sans-serif;font-size:15px;font-weight:600;
-  text-align:center;padding:13px 8px;border:1px solid var(--line);
-  border-radius:10px;color:var(--ink);background:var(--surface);
-}
-.kanal:hover{border-color:var(--accent);text-decoration:none}
-.kawa{
-  background:var(--accent-soft);border-radius:14px;padding:22px;text-align:center;
-}
-.kawa p{font-size:16px;margin-bottom:16px}
-.kawa .btn{max-width:320px;margin:0 auto}
+/* więcej zieleni */
+.dla p{background:#DCE6DE;border-radius:0 14px 14px 0;padding:16px 20px;border-left-width:5px}
+.kim{background:var(--las);color:#DDE7E0}
+.kim h2,.kim .mocno{color:#fff}
+.kim strong{color:#fff}
 
-/* ===== STOPKA ===== */
-footer{
-  border-top:1px solid var(--line);padding-block:30px 44px;text-align:center;
-  font-family:"Libre Franklin",sans-serif;font-size:14px;color:var(--muted);
-}
-footer a{color:var(--muted)}
-.stopka-linki{margin-bottom:15px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
-.zastrzezenie{max-width:42em;margin:18px auto 0;font-size:13px;line-height:1.6;color:var(--muted)}
-
-@media (min-width:560px){
-  body{font-size:18px}
-  h2{font-size:26px}
-  section{padding-block:58px}
-  .kanaly{grid-template-columns:repeat(4,1fr)}
-  .kontakt-btns{flex-direction:row}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important}
-}
+.patronite{background:var(--las);color:#DDE7E0;border-radius:24px;padding:30px 28px;border:2px solid var(--bursztyn);display:grid;gap:22px;align-items:center}
+.patronite h2{margin-bottom:18px;color:#fff}
+.patronite .drobne{color:#B9C8BE}
+@media(min-width:860px){.patronite{grid-template-columns:1fr auto;gap:36px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<!-- ====================================================================
-     1. EKRAN PIERWSZY
-     ZDJĘCIE: wgraj plik zdjecie.jpg do tego samego katalogu
-     ==================================================================== -->
-<div class="wrap">
+<div class="w">
   <header class="hero">
-    <img src="zdjecie.jpg" alt="Dawid Zadrożny" class="foto" width="128" height="128">
+    <svg class="droga" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true"><path d="M30 590 C 170 520, 40 400, 200 330 S 360 170, 380 10"/></svg>
+    <div class="kto"><img src="dawid.jpg" alt="Dawid Zadrożny" width="76" height="76"><p><b>Dawid Zadrożny</b><br>W&nbsp;Drodze. Wsparcie w&nbsp;trzeźwieniu 1:1, online</p></div>
     <h1>8&nbsp;lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.</h1>
-    <p class="lead">Rozmawiam z&nbsp;tymi, którzy w&nbsp;tym tkwią. I&nbsp;z&nbsp;tymi, którzy na to patrzą.</p>
-    <div class="btn-para">
-      <button type="button" class="btn btn-main ui" data-cal-link="dawidzadrozny/rozmowa-wstepna" data-cal-config='{"layout":"month_view"}'>Umów bezpłatne 20 minut<small>Bez oceniania i bez zobowiązań</small></button>
+    <p class="lead">Rozmawiam z&nbsp;tymi, którzy w&nbsp;tym tkwią, i&nbsp;z&nbsp;tymi, którzy na to patrzą.</p>
+    <p class="podlead">Rozmowy 1:1 dla osób, które zmagają się z&nbsp;alkoholem lub innymi substancjami, i&nbsp;dla ich bliskich. Dzielę się własnym doświadczeniem, nie prowadzę terapii.</p>
+    <div class="akcje">
+      <a class="btn btn-bursztyn" href="#umow">Umów rozmowę</a>
+      
     </div>
-    <div class="znaczniki">
-      <span class="znacznik">Trzeźwieję od 27.12.2024</span>
-      <span class="znacznik">Profilaktyka uzależnień</span>
-      <span class="znacznik">Rozmowy online</span>
-    </div>
+    <p class="licznik">Trzeźwieję od <b id="dni">660+</b> dni, od 27 grudnia 2024.</p>
   </header>
 </div>
 
-<!-- ====================================================================
-     2. DLA KOGO
-     ==================================================================== -->
-<div class="wrap">
+<div class="w waska">
   <section>
-    <span class="eyebrow">Dla kogo</span>
     <h2>Czy ta rozmowa jest dla Ciebie?</h2>
-    <ul class="lista">
-      <li><strong>Osoby uzależnione</strong>, które mimo kolejnych prób nie potrafią przestać. Niezależnie od tego, czy chodzi o&nbsp;alkohol, narkotyki, leki czy coś innego.</li>
-      <li><strong>Bliscy osób uzależnionych.</strong> Partnerzy, rodzice, rodzeństwo, którzy chcą zrozumieć, jak to wygląda od środka.</li>
-      <li><strong>Osoby, które już przestały</strong>, ale nie wiedzą, co dalej. Trzeźwość rozwiązała jeden problem i&nbsp;odsłoniła resztę.</li>
-      <li><strong>Ludzie, którzy czują, że coś musi się zmienić</strong>, ale nie wiedzą, od czego zacząć.</li>
-    </ul>
+    <div class="dla">
+      <p><strong>Chcesz przestać pić albo brać</strong>, ale kolejne próby kończą się tak samo.</p>
+      <p><strong>Już nie pijesz albo nie bierzesz</strong> i&nbsp;chcesz to utrzymać. Trzeźwość rozwiązała jeden problem i&nbsp;odsłoniła resztę.</p>
+      <p><strong>Przechodzisz trudny moment</strong> i&nbsp;potrzebujesz porozmawiać z&nbsp;kimś, kto zna to od środka.</p>
+      <p><strong>Jesteś bliską osobą</strong> kogoś uzależnionego i&nbsp;brakuje Ci już sił.</p>
+    </div>
   </section>
 </div>
 
-<!-- ====================================================================
-     3. REZERWACJA
-     ==================================================================== -->
-<div class="wrap">
+<div class="kim">
+  <div class="w waska">
+    <section>
+      <h2>Znam ten schemat od środka</h2>
+      <p>Przez osiem lat uciekałem w&nbsp;alkohol i&nbsp;inne substancje. <strong>Z&nbsp;boku wyglądało to dobrze:</strong> praca, sport, partnerka, ludzie, którzy niczego nie widzieli. Długo wydawało mi się, że skoro na zewnątrz wszystko gra, to nie jest tak źle.</p>
+      <p>Przez ostatnie cztery z&nbsp;tych lat szukałem drogi: obietnice, krótkie przerwy, powroty do tych samych schematów. Przełom przyszedł, kiedy przyjąłem pomoc i&nbsp;<strong>przestałem próbować przejść przez to sam.</strong></p>
+      <p><strong>Trzeźwieję od 27 grudnia 2024 roku.</strong> Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień.</p>
+      <p class="mocno">Nie jestem terapeutą i&nbsp;nie udaję, że moje doświadczenie zastępuje leczenie.</p>
+    </section>
+  </div>
+</div>
+
+<div class="w">
+  <section style="border-top:0">
+    <h2>Jak wygląda rozmowa</h2>
+    <p style="max-width:40em;margin-bottom:28px"><strong>Uwaga jest na Tobie.</strong> Nie przychodzisz po wykład. Przychodzisz po rozmowę, w&nbsp;której przez większość czasu mówisz Ty. Nie musisz wiedzieć, od czego zacząć, i&nbsp;w&nbsp;każdej chwili możemy zrobić przerwę.</p>
+    <ol class="kroki">
+      <li><h3>Słucham i&nbsp;pytam</h3><p>Co dzieje się teraz w&nbsp;Twoim życiu, z&nbsp;czym sobie nie radzisz i&nbsp;jakie próby już były. Pomagam to uporządkować, zamiast od razu podsuwać rozwiązania.</p></li>
+      <li><h3>Mówię o&nbsp;sobie, jeśli to pasuje</h3><p>Co u&nbsp;mnie zadziałało, jakie błędy powtarzałem latami i&nbsp;co wreszcie pozwoliło mi żyć inaczej.</p></li>
+      <li><h3>Jeden konkretny krok</h3><p>Razem pracujemy nad jednym krokiem, który możesz podjąć po rozmowie.</p></li>
+    </ol>
+    <p class="na-koniec">To, gdzie jesteś teraz, nie przesądza o&nbsp;tym, co będzie dalej.</p>
+  </section>
+
   <section id="umow">
-    <span class="eyebrow">Rezerwacja</span>
-    <h2>Jak się umówić</h2>
-    <div class="oferta">
-      <div class="karta karta--wyroz">
-        <span class="cena">Bez opłaty</span>
-        <h3>Rozmowa wstępna</h3>
-        <p class="meta">20 minut. Telefon, WhatsApp albo Google Meet.</p>
-        <ul class="lista">
-          <li>Mówisz, co się dzieje. Słucham.</li>
-          <li>Sprawdzamy, czy jestem właściwą osobą do tej rozmowy.</li>
-          <li>Do rezerwacji wystarczy imię albo pseudonim i&nbsp;adres e-mail.</li>
-          <li>Bez zobowiązań i&nbsp;bez namawiania na dalszy ciąg.</li>
+    <h2>Wybierz rozmowę</h2>
+    <p class="jak-rez">Wybierasz termin, płacisz 100&nbsp;zł, spotykamy się online i&nbsp;zaczynamy od tego, z&nbsp;czym jesteś dziś.</p>
+    <div class="oferty">
+      <div class="k ciemna">
+        <h3>Wsparcie w&nbsp;trzeźwieniu 1:1</h3>
+        <div class="cena">100 zł</div>
+        <p class="forma">Telefon, WhatsApp albo Google Meet</p>
+        <ul>
+          <li>Nie musisz przygotowywać swojej historii. Mówisz, co się dzieje, ja <strong>słucham bez oceniania</strong>.</li>
+          <li>Porządkujemy Twoją sytuację i&nbsp;to, co już masz po swojej stronie.</li>
+          <li>Do rezerwacji wystarczy imię albo pseudonim i&nbsp;e-mail, a&nbsp;przy rozmowie telefonicznej lub przez WhatsApp także numer.</li>
+          <li>Zaczynamy od jednej rozmowy. Potem zdecydujesz, czy chcesz kontynuować.</li>
         </ul>
-        <button type="button" class="btn btn-main ui" data-cal-link="dawidzadrozny/rozmowa-wstepna" data-cal-config='{"layout":"month_view"}'>Wybierz termin</button>
-        <p style="margin-top:12px;font-size:14px;color:var(--muted);text-align:center">Kalendarz się nie otworzył? <a href="https://cal.com/dawidzadrozny/rozmowa-wstepna" target="_blank" rel="noopener">Otwórz w&nbsp;nowej karcie</a></p>
+        <button type="button" class="btn btn-bursztyn" data-cal-link="dawidzadrozny/rozmowa-wspierajaca-1-1" data-cal-config='{"layout":"month_view"}'>Wybierz termin i&nbsp;zapłać</button>
+        <p class="zapas">Kalendarz się nie otworzył? <a href="https://cal.com/dawidzadrozny/rozmowa-wspierajaca-1-1" target="_blank" rel="noopener">Otwórz w&nbsp;nowej karcie</a></p>
+      </div>
+      <div class="k">
+        <h3>Rozmowa dla bliskich</h3>
+        <div class="cena">100 zł</div>
+        <p class="forma">Dla partnerów, rodziców i&nbsp;rodzeństwa osób uzależnionych. Telefon, WhatsApp albo Google Meet</p>
+        <ul>
+          <li>Ktoś bliski pije lub bierze, a&nbsp;Ty coraz więcej siły zostawiasz na martwienie się i&nbsp;próby pomocy?</li>
+          <li>Rozmawiamy o&nbsp;tym, co przeżywasz, czego potrzebujesz i&nbsp;na co masz wpływ.</li>
+          <li>Szukamy kroku, który możesz zrobić <strong>dla siebie</strong>.</li>
+          <li>Wnoszę perspektywę osoby, która sama jest w&nbsp;procesie zdrowienia.</li>
+          <li>Rozmowa skupia się na Tobie. Nie obejmuje kontaktu z&nbsp;Twoim bliskim ani przekonywania go do leczenia.</li>
+        </ul>
+        <button type="button" class="btn btn-las" data-cal-link="dawidzadrozny/rozmowa-dla-bliskich" data-cal-config='{"layout":"month_view"}'>Wybierz termin dla bliskich</button>
+        <p class="zapas">Kalendarz się nie otworzył? <a href="https://cal.com/dawidzadrozny/rozmowa-dla-bliskich" target="_blank" rel="noopener">Otwórz w&nbsp;nowej karcie</a></p>
       </div>
     </div>
-
-    <p style="margin-top:20px;font-size:16px;color:var(--muted)">Odwołanie i&nbsp;przełożenie są bezpłatne do 24 godzin przed spotkaniem. <a href="regulamin.html">Pełne zasady w&nbsp;regulaminie</a>.</p>
-
-    <!-- ============================================================
-         KONTAKT PRZY BRAKU TERMINU
-         ============================================================ -->
-    <div class="kontakt-box">
-      <p>Nie widzisz pasującego terminu?</p>
-      <p>Napisz, znajdziemy inny.</p>
-      <div class="kontakt-btns">
-        <a class="btn btn-main" href="https://wa.me/48516248898" target="_blank" rel="noopener">Napisz na WhatsApp</a>
-        <a class="btn btn-ghost" href="mailto:kontakt@dawidzadrozny.pl">Napisz maila</a>
+    <p class="zasady-platnosci">Płacisz przy rezerwacji, kartą albo BLIK-iem. Odwołanie najpóźniej dzień przed rozmową to pełny zwrot, w dniu rozmowy przenosimy ją na inny termin. <a href="regulamin.html">Pełne zasady w&nbsp;regulaminie</a>.</p>
+    <div class="pytanie">
+      <div><h3>Masz pytanie przed rezerwacją?</h3><p>Napisz, odpowiem. Możesz też zapytać, czy ta rozmowa pasuje do Twojej sytuacji. Wystarczą sprawy organizacyjne, nie wysyłaj dokumentacji medycznej.</p></div>
+      <div class="akcje">
+        <a class="btn btn-bursztyn" href="https://wa.me/48516248898" target="_blank" rel="noopener"><svg class="wa-ikona" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Napisz na WhatsApp</a>
+        <a class="btn btn-obrys" href="mailto:kontakt@dawidzadrozny.pl">Napisz maila</a>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ====================================================================
-     4. PRZEBIEG I EFEKT
-     ==================================================================== -->
-<div class="wrap">
+<div class="w waska">
   <section>
-    <span class="eyebrow">Jak to wygląda</span>
-    <h2>Przebieg rozmowy</h2>
-    <p><strong>Uwaga jest na Tobie.</strong> Na tym, co dzieje się teraz w&nbsp;Twoim życiu, z&nbsp;czym sobie nie radzisz i&nbsp;jakie próby już były.</p>
-    <p>Najpierw słucham i&nbsp;pytam. Pomagam uporządkować sytuację, zamiast od razu podsuwać rozwiązania.</p>
-    <p>Potem, jeśli to pasuje do Twojej sytuacji, mówię o&nbsp;tym, co przeszedłem. Co u&nbsp;mnie zadziałało, jakie błędy powtarzałem latami i&nbsp;co wreszcie pozwoliło mi żyć inaczej.</p>
-    <p>Nie przychodzisz po wykład. Przychodzisz po rozmowę, w&nbsp;której przez większość czasu mówisz Ty.</p>
-    <ul class="lista" style="margin-top:22px">
-      <li>Słucham bez oceniania.</li>
-      <li>Wspólnie porządkujemy to, co się u&nbsp;Ciebie dzieje.</li>
-      <li>Patrzymy nie tylko na to, co się sypie, ale też na to, co już masz. Wcześniejsze próby, okresy, w&nbsp;których było lepiej, ludzi wokół Ciebie, rzeczy, które choć przez chwilę działały.</li>
-      <li>Na koniec nazywamy jeden konkretny krok, który zrobisz po spotkaniu.</li>
-    </ul>
-    <p style="margin-top:20px"><strong>To, gdzie jesteś teraz, nie przesądza o&nbsp;tym, co będzie dalej.</strong></p>
-  </section>
-</div>
-
-<!-- ====================================================================
-     5. KIM JESTEM
-     ==================================================================== -->
-<div class="wrap">
-  <section>
-    <span class="eyebrow">Kim jestem</span>
-    <h2>Znam ten schemat od środka</h2>
-    <p>Przez osiem lat uciekałem w&nbsp;alkohol i&nbsp;inne substancje. Z&nbsp;boku wyglądało to dobrze. Praca, sport, partnerka, ludzie, którzy niczego nie widzieli. Stwarzałem pozory i&nbsp;długo wydawało mi się, że skoro wszystko na zewnątrz gra, to nie jest tak źle.</p>
-    <p>Przez ostatnie cztery lata szukałem drogi. Obietnice, krótkie okresy abstynencji, powroty do tych samych schematów. Przełom nie przyszedł dlatego, że nagle wszystko zrozumiałem. Zacząłem słuchać ludzi, którzy chcieli dla mnie dobrze, przyjąłem pomoc i&nbsp;przestałem próbować przejść przez to sam.</p>
-    <p>Trzeźwieję od 27 grudnia 2024 roku. Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień i&nbsp;zdobywam kolejne kwalifikacje. <strong>Nie jestem terapeutą i&nbsp;nie udaję, że moje doświadczenie zastępuje leczenie.</strong></p>
-  </section>
-</div>
-
-<!-- ====================================================================
-     6. ZASADY I GRANICE
-     ==================================================================== -->
-<div class="wrap">
-  <section>
-    <span class="eyebrow">Zasady</span>
     <h2>Czego nie robię</h2>
-    <p>Żeby to miało sens i&nbsp;było bezpieczne dla obu stron, kilka rzeczy mówię wprost.</p>
-    <ul class="lista lista--x">
+    <ul class="nie">
       <li><strong>Nie jestem terapeutą.</strong> Nie prowadzę terapii, nie stawiam diagnoz i&nbsp;nie udzielam porad medycznych.</li>
       <li><strong>Rozmowa nie zastępuje leczenia</strong> ani wizyty u&nbsp;lekarza, terapeuty czy psychiatry.</li>
       <li><strong>Nie doradzam, jak odstawić substancję.</strong> To jest pytanie do lekarza, nie do mnie.</li>
       <li><strong>Rozmowy są tylko dla osób pełnoletnich.</strong></li>
-      <li><strong>Nie prowadzę rozmowy z&nbsp;osobą pod wyraźnym wpływem.</strong> Jeśli tak się stanie, kończę spotkanie i&nbsp;proponuję jeden nowy termin.</li>
-      <li><strong>Nie naprawię za Ciebie drugiego człowieka.</strong> Nie przekonam ani nie zmuszę nikogo do zmiany.</li>
+      <li><strong>Nie prowadzę rozmowy z&nbsp;osobą pod wyraźnym wpływem.</strong> Jeśli tak się stanie, kończę spotkanie i&nbsp;proponuję jeden nowy termin bez dodatkowej opłaty.</li>
+      <li><strong>Nie mogę zagwarantować zmiany zachowania Twojego bliskiego.</strong> Mogę pomóc Tobie.</li>
     </ul>
-
     <p style="margin-top:22px">Jeśli Twoja sytuacja wymaga lekarza, terapeuty, detoksu albo ośrodka, powiem Ci to wprost i&nbsp;pomogę zorientować się, gdzie szukać.</p>
-
-    <p style="margin-top:20px;font-size:16px;color:var(--muted)">Rozmów nie nagrywam. Nie publikuję ich treści ani nie udostępniam osobom postronnym. W&nbsp;sytuacji bezpośredniego zagrożenia życia lub zdrowia bezpieczeństwo ma pierwszeństwo. Zasady przetwarzania danych opisuję w&nbsp;<a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
+    <p class="drobne">Rozmów nie nagrywam. Nie publikuję ich treści ani nie udostępniam osobom postronnym. W&nbsp;sytuacji bezpośredniego zagrożenia życia lub zdrowia bezpieczeństwo ma pierwszeństwo. Zasady przetwarzania danych opisuję w&nbsp;<a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
   </section>
-</div>
 
-<!-- ====================================================================
-     7. NAJCZĘSTSZE PYTANIA
-     ==================================================================== -->
-<div class="wrap">
   <section>
-    <span class="eyebrow">Pytania</span>
     <h2>Najczęstsze pytania</h2>
-
     <details>
       <summary>Czy to jest terapia?</summary>
       <div class="tresc">Nie. To rozmowa z&nbsp;osobą, która sama przeszła przez uzależnienie i&nbsp;zdobywa kwalifikacje do pracy z&nbsp;ludźmi. Terapia to osobna, uregulowana forma pomocy. Jeśli jej potrzebujesz, powiem Ci to wprost.</div>
     </details>
-
+    <details>
+      <summary>Czy mogę przyjść, jeśli korzystam już z&nbsp;terapii?</summary>
+      <div class="tresc">Tak. Ta rozmowa może być dodatkowym wsparciem opartym na doświadczeniu. Nie zastępuje terapii ani zaleceń Twoich specjalistów.</div>
+    </details>
+    <details>
+      <summary>Jak płacę?</summary>
+      <div class="tresc">Przy rezerwacji terminu, kartą albo BLIK-iem. Płatność obsługuje Stripe, więc nie widzę danych Twojej karty. Na adres e-mail dostajesz potwierdzenie rezerwacji i&nbsp;płatności.</div>
+    </details>
+    <details>
+      <summary>Jak wygląda połączenie?</summary>
+      <div class="tresc">Formę wybierasz przy rezerwacji. Przy telefonie i&nbsp;WhatsAppie to ja dzwonię do Ciebie o&nbsp;umówionej godzinie. Przy Google Meet link przychodzi w&nbsp;mailu z&nbsp;potwierdzeniem. Dzień wcześniej i&nbsp;godzinę przed rozmową dostajesz przypomnienie.</div>
+    </details>
     <details>
       <summary>Czy muszę już nie pić i&nbsp;nie brać, żeby się umówić?</summary>
-      <div class="tresc">Nie. Nie musisz mieć za sobą ani jednego dnia bez i&nbsp;nie musisz niczego obiecywać. Możesz być w&nbsp;trakcie i&nbsp;możesz jeszcze nie wiedzieć, czy chcesz przestać. Jedno dotyczy samej rozmowy: <strong>rozmawiamy na trzeźwo, obie strony</strong>. Nie dlatego, że oceniam, tylko dlatego, że pod wpływem ta rozmowa nic Ci nie da. Jeśli tego dnia nie wyjdzie, napisz i&nbsp;ustalimy inny termin.</div>
+      <div class="tresc">Nie. Możesz być w&nbsp;trakcie i&nbsp;możesz jeszcze nie wiedzieć, czy chcesz przestać. Jedno dotyczy samej rozmowy: <strong>na spotkanie przyjdź trzeźwy, tak jak ja</strong>. To warunek rozmowy.<br><br><strong>Ważne:</strong> nie odstawiaj nagle alkoholu tylko po to, żeby odbyć tę rozmowę. Po długim, intensywnym piciu nagłe odstawienie może być niebezpieczne. Jeśli obawiasz się odstawienia albo pojawiają się objawy, najpierw skontaktuj się z&nbsp;lekarzem. W&nbsp;nagłym zagrożeniu dzwoń pod 112.</div>
     </details>
-
     <details>
       <summary>Czy ktoś się dowie, że z&nbsp;Tobą rozmawiam?</summary>
-      <div class="tresc">Do rezerwacji wystarczy imię albo pseudonim i&nbsp;adres e-mail. Nie potrzebuję nazwiska ani dokumentów. Rozmowy nie nagrywam, a&nbsp;tego, z&nbsp;kim rozmawiam, nikomu nie zdradzam. Dane rezerwacji przechowuje kalendarz, z&nbsp;którego korzystam, na zasadach opisanych w&nbsp;<a href="polityka-prywatnosci.html">polityce prywatności</a>.</div>
+      <div class="tresc">Do rezerwacji wystarczy imię albo pseudonim i&nbsp;adres e-mail. Nie nagrywam rozmów ani nie publikuję ich treści. Traktuję naszą rozmowę jako poufną. Pseudonim nie daje pełnej anonimowości: przy płatności dostaję dane, które przekazuje operator płatności. Wyjątek to bezpośrednie zagrożenie życia lub zdrowia. Ten wyjątek i&nbsp;zasady obsługi danych opisuję w&nbsp;<a href="polityka-prywatnosci.html">polityce prywatności</a>.</div>
     </details>
-
-    <details>
-      <summary>A&nbsp;jeśli nie będę wiedzieć, co powiedzieć?</summary>
-      <div class="tresc">To normalne i&nbsp;zdarza się często. Od tego są pytania. Nie musisz przychodzić z&nbsp;gotową opowieścią ani niczego przygotowywać.</div>
-    </details>
-
     <details>
       <summary>Problem ma ktoś bliski, nie ja. Mogę przyjść?</summary>
-      <div class="tresc">Tak. Rozmawiam z&nbsp;bliskimi osób uzależnionych. Nie przekonam nikogo do zmiany i&nbsp;nie będę próbował, ale mogę opowiedzieć, jak to wygląda od środka.</div>
+      <div class="tresc">Tak. Jest na to osobna <a href="#umow">rozmowa dla bliskich</a>. Skupiamy się na Tobie: na tym, co przeżywasz i&nbsp;na co masz wpływ.</div>
     </details>
-
     <details>
-      <summary>Co się dzieje po rozmowie?</summary>
-      <div class="tresc">Na koniec nazywamy najważniejszy wniosek i&nbsp;jeden następny krok. Jeśli kolejne spotkanie ma sens, napisz na WhatsApp albo maila i&nbsp;ustalimy termin. Jeśli potrzebujesz innej formy pomocy, powiem Ci o&nbsp;tym otwarcie.</div>
+      <summary>Co, jeśli muszę odwołać albo przełożyć?</summary>
+      <div class="tresc">Przełożenie jest bezpłatne. Odwołanie najpóźniej w&nbsp;dniu poprzedzającym rozmowę oznacza automatyczny zwrot całych 100&nbsp;zł. Przy odwołaniu w&nbsp;dniu rozmowy przenosimy ją na inny termin. Jeśli nie przyjdziesz bez odwołania, termin przepada. Link do zmian jest w&nbsp;mailu z&nbsp;potwierdzeniem, a&nbsp;szczegóły w&nbsp;<a href="regulamin.html">regulaminie</a>.</div>
     </details>
-
-    <details>
-      <summary>Co, jeśli muszę odwołać?</summary>
-      <div class="tresc">Odwołanie i&nbsp;przełożenie są bezpłatne do 24 godzin przed spotkaniem. Link do odwołania jest w&nbsp;mailu z&nbsp;potwierdzeniem.</div>
-    </details>
-
-    <div class="btn-para" style="margin-top:30px">
-      <button type="button" class="btn btn-main ui" data-cal-link="dawidzadrozny/rozmowa-wstepna" data-cal-config='{"layout":"month_view"}'>Umów bezpłatne 20 minut<small>Bez oceniania i bez zobowiązań</small></button>
-    </div>
   </section>
-</div>
 
-<!-- ====================================================================
-     8. GDZIE MNIE ZNAJDZIESZ
-     ==================================================================== -->
-<div class="wrap">
   <section>
-    <span class="eyebrow">Gdzie mnie znajdziesz</span>
     <h2>Mówię o&nbsp;tym publicznie</h2>
     <div class="kanaly">
-      <a class="kanal" href="https://www.tiktok.com/@zadrozny_wdrodze" target="_blank" rel="noopener">TikTok</a>
-      <a class="kanal" href="https://www.instagram.com/zadrozny_wdrodze" target="_blank" rel="noopener">Instagram</a>
-      <a class="kanal" href="https://www.facebook.com/zadrozny.wdrodze" target="_blank" rel="noopener">Facebook</a>
-      <a class="kanal" href="https://www.youtube.com/@zadrozny_wdrodze" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@zadrozny_wdrodze" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/zadrozny_wdrodze" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/zadrozny.wdrodze" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.youtube.com/@zadrozny_wdrodze" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://wa.me/48516248898" target="_blank" rel="noopener">WhatsApp</a>
+      <!-- <a href="#wesprzyj">Patronite</a> -->
     </div>
   </section>
-</div>
 
-<!-- ====================================================================
-     9. KRYZYS. Osobna sekcja, tuż przed stopką.
-     ==================================================================== -->
-<div class="wrap">
+  <section id="wesprzyj" hidden><!-- odkryć po weryfikacji Patronite i podmianie PATRONITE_URL -->
+    <div class="patronite">
+      <div>
+        <h2>Wesprzyj W&nbsp;Drodze</h2>
+        <p>Jeśli moje materiały coś Ci dają, możesz pomóc tworzyć kolejne. Zostają za darmo dla wszystkich.</p>
+      </div>
+      <a class="btn btn-bursztyn" href="PATRONITE_URL" target="_blank" rel="noopener">Zostań Patronem</a>
+    </div>
+  </section>
+
   <section>
     <div class="kryzys">
       <p><strong>Jeśli jesteś w&nbsp;bezpośrednim zagrożeniu życia lub zdrowia, nie rezerwuj rozmowy.</strong></p>
-      <p style="margin-top:9px">Zadzwoń pod <strong>112</strong> lub <strong>999</strong>, albo zgłoś się na najbliższą izbę przyjęć. Całodobowe wsparcie telefoniczne: <strong>800 70 2222</strong>, Centrum Wsparcia.</p>
+      <p>Zadzwoń pod <strong>112</strong> lub <strong>999</strong>, albo zgłoś się na najbliższą izbę przyjęć. Całodobowe wsparcie telefoniczne: <strong>800 70 2222</strong>, Centrum Wsparcia. Telefon zaufania w&nbsp;sprawie uzależnień, także dla bliskich: <strong>800 199 990</strong>, codziennie 16:00–21:00.</p>
     </div>
   </section>
 </div>
 
-<!-- ====================================================================
-     10. STOPKA
-     ==================================================================== -->
 <footer>
-  <div class="wrap">
-    <div class="stopka-linki">
-      <a href="regulamin.html">Regulamin</a>
-      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
-    </div>
+  <div class="w">
+    <div class="linki"><a href="regulamin.html">Regulamin</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="https://wa.me/48516248898" target="_blank" rel="noopener">WhatsApp</a></div>
     <p><a href="mailto:kontakt@dawidzadrozny.pl">kontakt@dawidzadrozny.pl</a></p>
     <p class="zastrzezenie">Treści na tej stronie oraz rozmowy, które prowadzę, nie są terapią, poradą medyczną ani psychologiczną i&nbsp;nie zastępują kontaktu z&nbsp;lekarzem lub terapeutą. W&nbsp;sytuacji zagrożenia życia lub zdrowia zadzwoń pod numer 112.</p>
   </div>
 </footer>
 
-<!-- ====================================================================
-     KALENDARZ Cal.com. Nic tu nie zmieniasz.
-     ==================================================================== -->
 <script>
+document.getElementById('dni').textContent=Math.floor((Date.now()-new Date('2024-12-27T00:00:00'))/864e5);
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", { origin: "https://cal.com" });
 Cal("ui", {
-  hideEventTypeDetails: false,
+  hideEventTypeDetails: true,
   layout: "month_view",
-  theme: "dark",
-  cssVarsPerTheme: {
-    dark: {
-      "cal-bg": "#1D2A40",
-      "cal-bg-emphasis": "#38445A",
-      "cal-bg-subtle": "#26344D",
-      "cal-bg-muted": "#2F3B50",
-      "cal-border": "#38445A",
-      "cal-border-subtle": "#2F3B50",
-      "cal-border-emphasis": "#4A5670",
-      "cal-border-booker": "#38445A",
-      "cal-brand": "#D8B673",
-      "cal-brand-emphasis": "#C4A05D",
-      "cal-brand-text": "#1D2A40",
-      "cal-text": "#F1EDE5",
-      "cal-text-emphasis": "#F1EDE5",
-      "cal-text-subtle": "#CFD5DE",
-      "cal-text-muted": "#9EA9B7"
-    }
-  }
+  theme: "light",
+  cssVarsPerTheme: { light: { "cal-brand": "#1F3A2E", "cal-brand-emphasis": "#163026", "cal-brand-text": "#FFFFFF" } }
 });
 </script>
 </body>
