@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dawid Zadrożny | Wsparcie w trzeźwieniu 1:1</title>
-<meta name="description" content="Trzeźwieję od 27 grudnia 2024. Rozmowy 1:1 online dla osób uzależnionych i ich bliskich. Wsparcie oparte na własnym doświadczeniu, nie terapia.">
+<meta name="description" content="Rozmowy 1:1 online dla osób uzależnionych i ich bliskich. Wsparcie oparte na własnym doświadczeniu, nie terapia.">
 <link rel="canonical" href="https://dawidzadrozny.pl/">
 <meta property="og:title" content="Dawid Zadrożny | Wsparcie w trzeźwieniu 1:1">
 <meta property="og:description" content="8 lat uciekałem. Zmiana zaczęła się, gdy przyjąłem pomoc.">
@@ -159,7 +159,7 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
       <a class="btn btn-bursztyn" href="#umow">Umów rozmowę</a>
       
     </div>
-    <p class="licznik">Trzeźwieję od <b id="dni">660+</b> dni, od 27 grudnia 2024.</p>
+    <p class="licznik">Trzeźwieję od <b id="dni">680+</b> dni.</p>
   </header>
 </div>
 
@@ -181,7 +181,7 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
       <h2>Znam ten schemat od środka</h2>
       <p>Przez osiem lat uciekałem w&nbsp;alkohol i&nbsp;inne substancje. <strong>Z&nbsp;boku wyglądało to dobrze:</strong> praca, sport, partnerka, ludzie, którzy niczego nie widzieli. Długo wydawało mi się, że skoro na zewnątrz wszystko gra, to nie jest tak źle.</p>
       <p>Przez ostatnie cztery z&nbsp;tych lat szukałem drogi: obietnice, krótkie przerwy, powroty do tych samych schematów. Przełom przyszedł, kiedy przyjąłem pomoc i&nbsp;<strong>przestałem próbować przejść przez to sam.</strong></p>
-      <p><strong>Trzeźwieję od 27 grudnia 2024 roku.</strong> Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień.</p>
+      <p><strong>Trzeźwieję od <span id="dni2">680+</span> dni.</strong> Pracuję z&nbsp;terapeutą, chodzę na mityngi, uczę się i&nbsp;popełniam błędy. Skończyłem studia podyplomowe z&nbsp;profilaktyki i&nbsp;terapii uzależnień.</p>
       <p class="mocno">Nie jestem terapeutą i&nbsp;nie udaję, że moje doświadczenie zastępuje leczenie.</p>
     </section>
   </div>
@@ -333,7 +333,7 @@ h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;backg
 </footer>
 
 <script>
-document.getElementById('dni').textContent=Math.floor((Date.now()-new Date('2024-12-27T00:00:00'))/864e5);
+(function(){var n=Math.floor((Date.now()-1735254000000)/864e5);['dni','dni2'].forEach(function(i){var e=document.getElementById(i);if(e)e.textContent=n;});})();
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 Cal("init", { origin: "https://cal.com" });
 Cal("ui", {
